@@ -69,21 +69,46 @@ namespace ConsoleApplication1
 
 
             //后进先出
-            Stack stack = new Stack();
-            stack.Push("one");
-            stack.Push("two");
-            stack.Push("three");
+            /*  Stack stack = new Stack();
+               stack.Push("one");
+               stack.Push("two");
+               stack.Push("three");
 
-            foreach (var item in stack)
+               foreach (var item in stack)
+               {
+                   Console.Write(item+"\t");
+               }
+               stack.Pop();//删除顶部元素
+               foreach (var item in stack)
+               {
+                   Console.Write(item + "\t");
+               }
+               Console.WriteLine(stack.Peek());*/
+
+            /*    Stack stk1 = new Stack();
+                stk1.Push("1");
+                stk1.Push("2");
+                stk1.Push("3");
+                object obj = stk1.Clone();
+                stk1 = (Stack)obj;
+                foreach (var item in stk1)
+                {
+                    Console.WriteLine(item);
+                }*/
+
+            //hashtable案例
+            Hashtable ht = new Hashtable();
+            ht.Add("1", "焦1康");
+            ht.Add("2", "焦2康");
+            ht.Add("3", "焦3康");
+            ht.Add("4", "焦4康");
+
+
+            foreach (DictionaryEntry item in ht)
             {
-                Console.Write(item+"\t");
+                Console.WriteLine(item.Key.ToString()+":"+item.Value.ToString());
             }
-            stack.Pop();//删除顶部元素
-            foreach (var item in stack)
-            {
-                Console.Write(item + "\t");
-            }
-            Console.WriteLine(stack.Peek());
+            Console.WriteLine("人数:"+ht.Count);
         }
     }
 }
