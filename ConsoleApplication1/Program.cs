@@ -49,23 +49,41 @@ namespace ConsoleApplication1
             //arraylist1.Contains(2);//查找,返回bool类型
 
 
-            Queue queue = new Queue();//先进先出集合
-            queue.Enqueue("张三");
-            queue.Enqueue("李四");
-            queue.Enqueue("王五");
-            queue.Enqueue("赵六");
+            /*   Queue queue = new Queue();//先进先出集合
+               queue.Enqueue("张三");
+               queue.Enqueue("李四");
+               queue.Enqueue("王五");
+               queue.Enqueue("赵六");
 
-            foreach (var item in queue)
-            {
-                Console.WriteLine(item);
-            }
-            queue.Dequeue();
-            foreach (var item in queue)
-            {
-                Console.WriteLine(item);
-            }
-            queue.Dequeue();
+               foreach (var item in queue)
+               {
+                   Console.WriteLine(item);
+               }
+               queue.Dequeue();
+               foreach (var item in queue)
+               {
+                   Console.WriteLine(item);
+               }
+               queue.Dequeue();*/
 
+
+
+            //后进先出
+            Stack stack = new Stack();
+            stack.Push("one");
+            stack.Push("two");
+            stack.Push("three");
+
+            foreach (var item in stack)
+            {
+                Console.Write(item+"\t");
+            }
+            stack.Pop();//删除顶部元素
+            foreach (var item in stack)
+            {
+                Console.Write(item + "\t");
+            }
+            Console.WriteLine(stack.Peek());
         }
     }
 }
